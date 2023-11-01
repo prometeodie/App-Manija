@@ -9,6 +9,9 @@ import { GamesComponent } from './pages/games/games.component';
 import { GameComponent } from './pages/game/game.component';
 import { BlogsComponent } from './pages/blogs/blogs.component';
 import { BlogComponent } from './pages/blog/blog.component';
+import { LayoutComponent } from './pages/layout/layout.component';
+import { SharedModule } from './shared/shared.module';
+import { PrimengModule } from './primeng/primeng.module';
 
 
 @NgModule({
@@ -19,11 +22,14 @@ import { BlogComponent } from './pages/blog/blog.component';
     GamesComponent,
     GameComponent,
     BlogsComponent,
-    BlogComponent
+    BlogComponent,
+    LayoutComponent,
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    SharedModule,
+    PrimengModule
   ]
 })
 export class DashboardModule { }

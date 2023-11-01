@@ -1,0 +1,81 @@
+@import '../../scss/variables.scss';
+
+
+.footer__title{
+  display: flex;
+}
+
+.footer{
+  width: 100%;
+  padding: 1rem;
+  background-color: $background-footer-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title{
+    align-items: center;
+    &__img{
+      width: 3rem;
+      padding: 0.5rem;
+    }
+  }
+
+    &__section__title,
+    &__section__contact__title,
+    &__section__connect__title
+    {
+      margin: 0.3rem;
+    }
+
+  &__section__contact__list,
+  &__section__connect__list{
+    list-style-type: none;
+  }
+  &__section__contact__list__item__container,
+  &__section__connect__list__item{
+    cursor: pointer;
+  }
+
+  &__section__contact__list{
+    &__item{
+      margin-bottom: 0.3rem;
+
+      &__container{
+        transition: all 0.5s ease;
+        display: inline;
+        &:hover{
+          color: rgb(12, 129, 129);
+        }
+      }
+
+      &__icon{
+        margin-right: 0.3rem;
+        width: 1rem;
+      }
+
+      &__text{
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__section__connect__list{
+    display: flex;
+
+    &__item{
+      font-size: larger;
+      margin-right: 0.6em;
+      transition: color 0.5s ease;
+
+      &:hover{
+        color:rgb(199, 15, 174)
+      }
+      &:active{
+        transform: scale(0.7);
+      }
+    }
+  }
+
+
+}

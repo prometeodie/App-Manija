@@ -1,1 +1,36 @@
-<p>home works!</p>
+<main class="home">
+  <h1 class="home__news__title">Noticias</h1>
+  <section class="home__news">
+    <p-carousel [value]="products" class="home__news__carousel"
+                [numVisible]="1" [numScroll]="1"
+                [circular]="true"
+                [responsiveOptions]="responsiveOptions"
+                [autoplayInterval]=3000>
+      <ng-template let-product pTemplate="item">
+          <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+              <div class="mb-3 home__news__carousel__content">
+                  <span class="home__news__carousel__content__title">{{product.type}}</span>
+                  <img [src]="product.img" alt="pepito" class=" home__news__carousel__content__img shadow-2" />
+              </div>
+          </div>
+      </ng-template>
+  </p-carousel>
+  </section>
+  <h2 class="home__events__title">Eventos</h2>
+  <section class="home__events">
+    <!-- card -->
+    <div class="home__events__card" *ngFor="let event of events" [style.background]="event.backGroungColor">
+      <h3 class="home__events__card__title">
+        {{event.title}}
+      </h3>
+      <div class="home__events__card__content">
+        <img class="home__events__card__content__img" [src]="event.img" [alt]="event.title">
+          <ul class="home__events__card__content__info-ul">
+            <li class="home__events__card__content__info-ul__item">Dia/s: {{event.day}}</li>
+            <li class="home__events__card__content__info-ul__item">Horario: {{event.time}}</li>
+            <li class="home__events__card__content__info-ul__item">Lugar: {{event.place}}</li>
+          </ul>
+      </div>
+    </div>
+  </section>
+</main>

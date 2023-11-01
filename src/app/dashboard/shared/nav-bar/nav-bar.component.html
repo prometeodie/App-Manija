@@ -1,1 +1,6 @@
-<p>nav-bar works!</p>
+<nav class="nav-bar">
+  <ul class="nav-bar__ul">
+    <li class="nav-bar__ul__item " *ngFor="let item of navBar" [routerLink]="item.route" routerLinkActive="active-route" >{{item.name}}</li>
+    <li class=" nav-bar__ul__item nav-bar__ul__item--search"><i class="pi pi-search"></i></li>
+  </ul>
+</nav>
