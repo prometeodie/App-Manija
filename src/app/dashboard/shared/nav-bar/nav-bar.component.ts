@@ -13,6 +13,6 @@ export class NavBarComponent {
     {name:'Blogs', route:'blogs-list'},
     {name:'Juegos', route:'boardgames-list'},
     {name:'Nosotros', route:'about'},
-    {name:'Contacto', route:'contact'},
+    {name:'Contacto', route:'contact'}
   ]
 }

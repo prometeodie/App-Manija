@@ -13,3 +13,10 @@ export interface EventManija{
   place: string
   backGroungColor:string
 }
+
+
+export interface New{
+  img:string;
+  type:string;
+  route:string;
+}

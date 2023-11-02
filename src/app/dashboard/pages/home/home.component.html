@@ -1,16 +1,16 @@
 <main class="home">
   <h1 class="home__news__title">Noticias</h1>
   <section class="home__news">
-    <p-carousel [value]="products" class="home__news__carousel"
+    <p-carousel [value]="news" class="home__news__carousel"
                 [numVisible]="1" [numScroll]="1"
                 [circular]="true"
                 [responsiveOptions]="responsiveOptions"
                 [autoplayInterval]=3000>
-      <ng-template let-product pTemplate="item">
-          <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
-              <div class="mb-3 home__news__carousel__content">
-                  <span class="home__news__carousel__content__title">{{product.type}}</span>
-                  <img [src]="product.img" alt="pepito" class=" home__news__carousel__content__img shadow-2" />
+      <ng-template let-new pTemplate="item" >
+          <div class="border-1 surface-border border-round m-2 text-center py-5 px-3" >
+              <div class="mb-3 home__news__carousel__content" [routerLink]="new.route">
+                  <span class="home__news__carousel__content__title"  >{{new.type}}</span>
+                  <img [src]="new.img" alt="pepito" class=" home__news__carousel__content__img shadow-2"  />
               </div>
           </div>
       </ng-template>
@@ -19,7 +19,7 @@
   <h2 class="home__events__title">Eventos</h2>
   <section class="home__events">
     <!-- card -->
-    <div class="home__events__card" *ngFor="let event of events" [style.background]="event.backGroungColor">
+    <div class="home__events__card" *ngFor="let event of events" style.background="linear-gradient(180deg, rgba(0, 213, 156, 0.00) 5.26%, {{event.backGroungColor}} 97.89%)">
       <h3 class="home__events__card__title">
         {{event.title}}
       </h3>
