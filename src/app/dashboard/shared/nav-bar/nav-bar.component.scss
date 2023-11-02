@@ -1,8 +1,6 @@
 @import '../../scss/variables.scss';
 
 .nav-bar{
-  position: sticky;
-  top: 0;
   background-color: $background-nav-color;
 
   &__ul{
