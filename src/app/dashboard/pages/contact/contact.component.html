@@ -1,33 +1,31 @@
-<!-- <section class="contact-me">
-  <form data-aos="zoom-out-up" class="contact-me__form" (submit)="submitForm()" [formGroup]="myForm">
-      <mat-form-field class="contact-me__form__field" appearance="outline">
-        <mat-label>Name and Last-Name</mat-label>
-        <input matInput type="text" formControlName="name">
-        <mat-hint class="contact-me__form__field__error" *ngIf="isValidField('name')">{{showError('name')}} Example: Name Last-Name</mat-hint>
-      </mat-form-field>
-      <mat-form-field class="contact-me__form__field" appearance="outline">
-        <mat-label>Email</mat-label>
-        <input matInput type="text" formControlName="email" autocomplete="off">
-        <mat-hint class="contact-me__form__field__error" *ngIf="isValidField('email')">{{showError('email')}} Example:example@example.com</mat-hint>
-      </mat-form-field>
-      <mat-form-field class="contact-me__form__field" appearance="outline">
-        <mat-label>Subject</mat-label>
-        <input matInput  type="text" formControlName="subject">
-        <mat-hint class="contact-me__form__field__error" *ngIf="isValidField('subject')">{{showError('subject')}}</mat-hint>
-      </mat-form-field>
-      <mat-form-field class="contact-me__form__field" appearance="outline">
-        <mat-label>Message</mat-label>
-        <textarea matInput type="text" formControlName="message"></textarea>
-        <mat-hint class="contact-me__form__field__error" *ngIf="isValidField('message')">{{showError('message')}}</mat-hint>
-      </mat-form-field>
-      <button class="contact-me__form__button" type="submit">Send message</button>
-  </form>
-  <button class="contact-me__back-btn"
-          routerLink="/portfolio/projects">
-          <div class="contact-me__back-btn__back-ground"></div>
-    <i class="contact-me__back-btn__icon fa-sharp fa-solid fa-left-long"></i>
-    <span>Projects</span>
-  </button>
-  </div>
-</section>
- -->
+<main class="contact">
+  <h1 class="contact__title">Contacto</h1>
+  <h5 class="contact__subtitle">
+    Envianos tu consulta.
+  </h5>
+  <section class="contact__form__container">
+    <form action="" class="contact__form" [formGroup]="myForm">
+      <span class="p-float-label contact__form__item">
+        <input formControlName="name" class="contact__form__item__input" pInputText id="username" />
+        <label class="contact__form__item__label" htmlFor="username">Nombre y Apellido*</label>
+      </span>
+      <span class="contact__form__item__error" *ngIf="isValidField('name')">{{showError('name')}}</span>
+      <span class="p-float-label contact__form__item">
+        <input formControlName="email" class="contact__form__item__input" pInputText id="username" />
+        <label class="contact__form__item__label" htmlFor="username">Email*</label>
+      </span>
+      <span class="contact__form__item__error" *ngIf="isValidField('email')">{{showError('email')}}</span>
+      <span class="p-float-label contact__form__item">
+        <input formControlName="subject" class="contact__form__item__input" pInputText id="username" />
+        <label class="contact__form__item__label" htmlFor="username">Asunto*</label>
+      </span>
+      <span class="contact__form__item__error" *ngIf="isValidField('subject')">{{showError('subject')}}</span>
+      <span class="p-float-label contact__form__item">
+        <textarea formControlName="message" class="contact__form__item__input" id="float-input" rows="5" cols="30" pInputTextarea></textarea>
+        <label class="contact__form__item__label" for="float-input">Mensaje*</label>
+      </span>
+      <span class="contact__form__item__error" *ngIf="isValidField('message')">{{showError('message')}}</span>
+    <p-button class="contact__form__item__btn"  [outlined]="true" label="Enviar Mensaje" severity="help"></p-button>
+    </form>
+  </section>
+</main>

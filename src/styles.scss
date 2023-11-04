@@ -2,6 +2,7 @@
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
+@import './app/dashboard/scss/variables.scss';
 
 *{
   margin: 0;
@@ -11,6 +12,7 @@
 
 body{
   font-family: 'Roboto', sans-serif;
+  background-color: $background-main-sections-color;
 }
 
 body::-webkit-scrollbar {

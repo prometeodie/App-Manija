@@ -13,6 +13,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 import { SharedModule } from './shared/shared.module';
 import { PrimengModule } from './primeng/primeng.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { PrimengModule } from './primeng/primeng.module';
     CommonModule,
     DashboardRoutingModule,
     PrimengModule,
+    ReactiveFormsModule,
     RouterModule,
     SharedModule
   ]
