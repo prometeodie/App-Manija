@@ -7,7 +7,6 @@ import { CarouselModule } from 'primeng/carousel';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputTextModule } from 'primeng/inputtext';
 
-
 @NgModule({
   declarations: [],
   exports: [
@@ -15,7 +14,8 @@ import { InputTextModule } from 'primeng/inputtext';
     CarouselModule,
     CommonModule,
     InputTextareaModule,
-    InputTextModule
+    InputTextModule,
+
   ],
 })
 export class PrimengModule { }

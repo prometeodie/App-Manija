@@ -1,0 +1,66 @@
+@import '../../scss/variables.scss';
+
+.boardgame-card,
+.boardgame-card__header__game-info,
+.boardgame-card__body__chips{
+  display: flex;
+}
+
+.boardgame-card,
+.boardgame-card__header__game-info{
+  flex-direction: column;
+}
+
+.boardgame-card{
+  width: 19rem;
+  height: 37.5rem;
+  border-radius: 25px;
+  background: $background-board-game-card;
+  margin: 2rem 0.5rem; //TODO:borrar
+
+  &__header{
+    position: relative;
+
+    &__img{
+      width: 19rem;
+      height:16rem;
+      object-fit: cover;
+      border-radius: 25px 25px 0 0;
+    }
+
+    &__game-info{
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      background: linear-gradient(357deg, #131212 2.11%, rgba(19, 18, 18, 0.00) 97.34%);
+      height: 6.5rem;
+      justify-content: flex-end;
+      padding: 0.5rem;
+
+      &__title{
+        margin-bottom: 0.3rem;
+      }
+      &__item{
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__body{
+    padding: 0.5rem;
+
+    &__chips{
+      margin-bottom: 0.5rem;
+      width: 100%;
+      flex-wrap: wrap;
+      &__chip{
+        padding: 0.3rem;
+        border-radius: 25px;
+        background-color: $background-board-game-card-other-info;
+        color: $font-color-card-game;
+        font-size: x-small;
+        margin: 0.2rem;
+      }
+    }
+  }
+}
