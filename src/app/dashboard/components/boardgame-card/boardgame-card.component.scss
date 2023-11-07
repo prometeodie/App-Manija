@@ -2,14 +2,28 @@
 
 .boardgame-card,
 .boardgame-card__header__game-info,
-.boardgame-card__body__chips{
+.boardgame-card__body__chips,
+.boardgame-card__body,
+.boardgame-card__body__manijometro{
   display: flex;
 }
 
 .boardgame-card,
+.boardgame-card__body,
 .boardgame-card__header__game-info{
   flex-direction: column;
 }
+.boardgame-card__body,
+.boardgame-card__body__manijometro{
+  align-items: center;
+}
+
+.boardgame-card__body__chips__chip,
+.boardgame-card__body__manijometro{
+  background-color: $background-board-game-card-other-info;
+  color: $font-color-card-game;
+}
+
 
 .boardgame-card{
   width: 19rem;
@@ -53,14 +67,50 @@
       margin-bottom: 0.5rem;
       width: 100%;
       flex-wrap: wrap;
+
       &__chip{
         padding: 0.3rem;
         border-radius: 25px;
-        background-color: $background-board-game-card-other-info;
-        color: $font-color-card-game;
         font-size: x-small;
         margin: 0.2rem;
       }
     }
+
+      &__manijometro{
+        padding: 1rem;
+        border-radius: 20px;
+        margin-bottom: 0.8rem;
+
+        &__info{
+          width: 9rem;
+          &__question{
+            display: block;
+            font-size: xx-small;
+            margin-left: 0.5rem;
+            margin-top: 0.4rem;
+          }
+        }
+      }
+
+      &__game-synopsis{
+        font-size: 14px;
+      }
+
+      &__btn{
+        background-color: #f34c5d;
+        padding: 0.5rem 5rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.7s;
+
+        &:hover{
+          background-color: #FB7785;
+        }
+        &:active{
+          transform: scale(0.97);
+        }
+      }
+    }
   }
-}
+
