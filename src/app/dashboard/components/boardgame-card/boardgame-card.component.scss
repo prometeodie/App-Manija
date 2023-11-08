@@ -4,7 +4,9 @@
 .boardgame-card__header__game-info,
 .boardgame-card__body__chips,
 .boardgame-card__body,
-.boardgame-card__body__manijometro{
+.boardgame-card__body__manijometro,
+.boardgame-card__body__manijometro__pie-chart,
+.boardgame-card__body__manijometro__pie-chart__chart{
   display: flex;
 }
 
@@ -14,8 +16,15 @@
   flex-direction: column;
 }
 .boardgame-card__body,
-.boardgame-card__body__manijometro{
+.boardgame-card__body__manijometro,
+.boardgame-card__body__manijometro__pie-chart,
+.boardgame-card__body__manijometro__pie-chart__chart{
   align-items: center;
+}
+
+.boardgame-card__body__manijometro__pie-chart,
+.boardgame-card__body__manijometro__pie-chart__chart{
+  justify-content: center;
 }
 
 .boardgame-card__body__chips__chip,
@@ -23,7 +32,6 @@
   background-color: $background-board-game-card-other-info;
   color: $font-color-card-game;
 }
-
 
 .boardgame-card{
   width: 19rem;
@@ -90,10 +98,28 @@
             margin-top: 0.4rem;
           }
         }
+
+        &__pie-chart__chart{
+          width: 5rem;
+          height: 5rem;
+          border-radius: 100%;
+
+          &::before{
+            content: "";
+            width: 4rem;
+            height: 4rem;
+            border-radius: 100%;
+            background-color:$background-board-game-card-other-info;
+            }
+          }
+
+          &__pie-chart__score{
+            position: absolute;
+          }
       }
 
       &__game-synopsis{
-        font-size: 14px;
+        font-size: 13px;
       }
 
       &__btn{
@@ -113,4 +139,3 @@
       }
     }
   }
-

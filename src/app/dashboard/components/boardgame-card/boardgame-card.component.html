@@ -26,9 +26,10 @@
         </span>
       </div>
       <div class="boardgame-card__body__manijometro__pie-chart">
-        <div class="boardgame-card__body__manijometro__pie-chart__chart"></div>
-        <!-- <p-chart type="doughnut" [data]="data"></p-chart> -->
-        <div class="boardgame-card__body__manijometro__pie-chart__numbers">90/100</div>
+        <div class="boardgame-card__body__manijometro__pie-chart__chart"
+        style.background="conic-gradient(#C12655 {{manijometroScore * 3.6/2}}deg, #C126B2 {{manijometroScore * 3.6}}deg, rgb(0 0 0 / 65%) 0deg)"
+        ></div>
+        <div class="boardgame-card__body__manijometro__pie-chart__score">90/100</div>
       </div>
     </div>
     <p class="boardgame-card__body__game-synopsis">Zombicide, the board game, has taken the world by storm with over two million copies sold since its release in 2012 and spawning a cult franchise of cooperative zombie slaying all over the world. In Zombicide, zombies are controlled....</p>

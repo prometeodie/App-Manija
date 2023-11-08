@@ -9,23 +9,7 @@ import { ChartModule } from 'primeng/chart';
   templateUrl: './boardgame-card.component.html',
   styleUrls: ['./boardgame-card.component.scss']
 })
-export class BoardgameCardComponent implements OnInit {
-  data: any;
+export class BoardgameCardComponent {
 
-  options: any;
-
-  ngOnInit() {
-      const documentStyle = getComputedStyle(document.documentElement);
-      const textColor = documentStyle.getPropertyValue('--text-color');
-
-      this.data = {
-          datasets: [
-              {
-                  data: [90,10],
-                  backgroundColor: [documentStyle.getPropertyValue('--blue-500'),documentStyle.getPropertyValue('--black')],
-                  hoverBackgroundColor: [documentStyle.getPropertyValue('--blue-400'), documentStyle.getPropertyValue('--yellow-400')]
-              }
-          ]
-      };
-    }
+  manijometroScore:number = 90;
 }
