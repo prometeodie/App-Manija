@@ -33,12 +33,45 @@
   color: $font-color-card-game;
 }
 
+@mixin top($top-color) {
+  outline: 4px solid $top-color;
+}
+
+@mixin top-dice($top-color, $puesto) {
+    position: absolute;
+    right: 1rem;
+    font-size: 2rem;
+    color: $top-color;
+
+    &:hover{
+      &::after{
+        content: $puesto' en el manijometro';
+        background-color: #131212cb;
+        font-size: 10px;
+        padding: 0.5rem;
+        border-radius: 3px;
+        position: absolute  ;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+
 .boardgame-card{
   width: 19rem;
   height: 37.5rem;
   border-radius: 25px;
   background: $background-board-game-card;
   margin: 2rem 0.5rem; //TODO:borrar
+
+  &__top-1{
+    @include top(#a2790d)
+  }
+
+  &__top-1__dice{
+    @include top-dice(#a2790d,'Puesto 1')
+  }
 
   &__header{
     position: relative;
@@ -137,5 +170,32 @@
           transform: scale(0.97);
         }
       }
+    }
+  }
+
+  // TODO: gold color hex: #a2790d silver color hex: #ACACAC  bronze color hex: #905923
+  // MEDIA QUERIES
+
+  @media (min-width:600px) {
+
+    .boardgame-card,
+    .boardgame-card__header__img{
+      width: 17.9rem
+    }
+
+    .boardgame-card__body__btn{
+      margin-top: 0.5rem;
+    }
+  }
+
+  @media (min-width:801px) {
+
+    .boardgame-card,
+    .boardgame-card__header__img{
+      width: 19rem;
+    }
+
+    .boardgame-card__body__btn{
+      margin-top: 1rem;
     }
   }
