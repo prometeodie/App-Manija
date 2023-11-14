@@ -12,6 +12,8 @@ import { ChartModule } from 'primeng/chart';
 export class BoardgameCardComponent {
 
   manijometroScore1:number = 90;
+  manijometroScore2:number = 50;
+  manijometroScore3:number = 20;
 
   donnutChartColor(scoreManija:number){
      let color1!: string;

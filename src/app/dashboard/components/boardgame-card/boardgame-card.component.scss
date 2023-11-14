@@ -34,13 +34,13 @@
 }
 
 @mixin top($top-color) {
-  outline: 4px solid $top-color;
+  outline: 5px solid $top-color;
 }
 
 @mixin top-dice($top-color, $puesto) {
     position: absolute;
     right: 1rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: $top-color;
 
     &:hover{
@@ -62,15 +62,34 @@
   width: 19rem;
   height: 37.5rem;
   border-radius: 25px;
-  background: $background-board-game-card;
+  background: $background-cards;
   margin: 2rem 0.5rem; //TODO:borrar
 
+  // Top games Classes
+  // GOLD
   &__top-1{
-    @include top(#a2790d)
+    @include top($gold)
   }
 
   &__top-1__dice{
-    @include top-dice(#a2790d,'Puesto 1')
+    @include top-dice($gold,'Puesto 1')
+  }
+  //SILVER
+  &__top-2{
+    @include top($silver)
+  }
+
+  &__top-2__dice{
+    @include top-dice($silver,'Puesto 2')
+  }
+
+  //BRONZE
+  &__top-3{
+    @include top($bronze)
+  }
+
+  &__top-3__dice{
+    @include top-dice($bronze,'Puesto 3')
   }
 
   &__header{
@@ -173,7 +192,6 @@
     }
   }
 
-  // TODO: gold color hex: #a2790d silver color hex: #ACACAC  bronze color hex: #905923
   // MEDIA QUERIES
 
   @media (min-width:600px) {

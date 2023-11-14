@@ -17,6 +17,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 // STAND ALONE COMPONENTS
 import { BoardgameCardComponent } from './components/boardgame-card/boardgame-card.component';
+import { BlogCardComponent } from './components/blog-card/blog-card.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { BoardgameCardComponent } from './components/boardgame-card/boardgame-ca
     ReactiveFormsModule,
     RouterModule,
     SharedModule,
-    BoardgameCardComponent
+    BoardgameCardComponent,
+    BlogCardComponent
   ]
 })
 export class DashboardModule { }

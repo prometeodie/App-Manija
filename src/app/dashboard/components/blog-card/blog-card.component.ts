@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-blog-card',
+  selector: 'blog-card',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './blog-card.component.html',

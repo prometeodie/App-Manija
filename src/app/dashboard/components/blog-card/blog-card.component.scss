@@ -1,0 +1,42 @@
+@import '../../scss/variables.scss';
+
+.blog-card{
+  display: flex;
+  width: 19rem;
+  background-color: $background-cards;
+  padding: 1.3rem 0.7rem;
+  border-radius: 1.2rem;
+  margin: 0.7rem 0;
+  cursor: pointer;
+
+  &:hover{
+    backdrop-filter: blur(10px);
+  }
+
+  &__img{
+    width: 8rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  &__information{
+    position: relative;
+
+    &__title{
+      margin-left: 0.5rem;
+    }
+
+    &__text{
+      font-size: 13px;
+      margin: 0.5rem;
+      font-weight: 300;
+    }
+
+    &__writer{
+      position: absolute;
+      font-size: x-small;
+      right: 0;
+    }
+
+  }
+}
