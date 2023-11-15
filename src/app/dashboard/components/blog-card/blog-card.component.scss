@@ -8,9 +8,12 @@
   border-radius: 1.2rem;
   margin: 0.7rem 0;
   cursor: pointer;
+  transition: all 0.5s;
 
   &:hover{
-    backdrop-filter: blur(10px);
+    transform: scale(0.9);
+    background-color: #453e74;
+    color: rgb(189, 177, 177);
   }
 
   &__img{
@@ -21,6 +24,7 @@
 
   &__information{
     position: relative;
+    width: 100%;
 
     &__title{
       margin-left: 0.5rem;
@@ -40,3 +44,19 @@
 
   }
 }
+
+// MEDIA QUERIES
+
+@media (min-width:600px) {
+  .blog-card{
+    width: 32.5rem;
+    &__img{
+      width: 10rem;
+    }
+  }
+
+  .blog-card__information__writer{
+    bottom: 0;
+  }
+
+  }

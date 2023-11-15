@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ChartModule } from 'primeng/chart';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'boardgame-card',
   standalone: true,
-  imports: [CommonModule,ChartModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './boardgame-card.component.html',
   styleUrls: ['./boardgame-card.component.scss']
 })

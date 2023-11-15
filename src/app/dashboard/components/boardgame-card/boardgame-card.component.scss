@@ -40,23 +40,27 @@
 @mixin top-dice($top-color, $puesto) {
     position: absolute;
     right: 1rem;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     color: $top-color;
+    background-color: #131212ce;
+    border-radius: 50%;
+    margin-right: 0.2rem;
 
-    &:hover{
+
       &::after{
-        content: $puesto' en el manijometro';
-        background-color: #131212cb;
-        font-size: 10px;
-        padding: 0.5rem;
+        content: 'Top '$puesto' Manijometro';
+        background-color: rgba(19, 18, 18, 0.7960784314);
+        font-size: 9px;
+        padding: 0.1rem;
         border-radius: 3px;
-        position: absolute  ;
-        right: 0;
-        bottom: 0;
+        position: absolute;
+        right: -1rem;
+        bottom: 42px;
+        text-align: center;
+        line-height: 12px;
       }
-    }
-  }
 
+  }
 
 .boardgame-card{
   width: 19rem;
@@ -65,6 +69,7 @@
   background: $background-cards;
   margin: 2rem 0.5rem; //TODO:borrar
 
+
   // Top games Classes
   // GOLD
   &__top-1{
@@ -72,7 +77,7 @@
   }
 
   &__top-1__dice{
-    @include top-dice($gold,'Puesto 1')
+    @include top-dice($gold,'1')
   }
   //SILVER
   &__top-2{
@@ -80,7 +85,7 @@
   }
 
   &__top-2__dice{
-    @include top-dice($silver,'Puesto 2')
+    @include top-dice($silver,'2')
   }
 
   //BRONZE
@@ -89,7 +94,7 @@
   }
 
   &__top-3__dice{
-    @include top-dice($bronze,'Puesto 3')
+    @include top-dice($bronze,'3')
   }
 
   &__header{
