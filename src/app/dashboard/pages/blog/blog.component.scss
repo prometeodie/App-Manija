@@ -1,0 +1,66 @@
+@import '../../scss/variables.scss';
+
+.blog,
+.blog__body{
+  display: flex;
+  flex-direction: column;
+}
+
+.blog{
+  padding: 1rem;
+  width: 100%;
+
+  &__header__title,
+  &__header__sub-title{
+    margin-bottom: 0.5rem;
+  }
+
+  &__header__sub-title{
+    font-weight: 400;
+  }
+
+  &__body{
+    align-items: center;
+    position: relative;
+
+    &__img{
+      border-radius: 6px;
+      margin-bottom: 2rem;
+      max-width: 800px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    &__paragraph{
+      margin-bottom: 1.5rem;
+      background-color: $background-sections-color;
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+
+    &__writer{
+      bottom:0;
+      font-weight: 300;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+}
+
+// MEDIA QUERIES
+
+@media (min-width:1289px) {
+  .blog{
+    padding: 1rem 10%;
+
+      &__body__paragraph{
+        width: 80%;
+        padding: 2rem;
+      }
+
+      &__body__writer{
+        right: 10%;
+      }
+  }
+}
