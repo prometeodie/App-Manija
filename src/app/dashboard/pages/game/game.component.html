@@ -1,1 +1,46 @@
-<p>game works!</p>
+<main class="boardgame">
+  <section class="boardgame__header">
+    <h1 class="boardgame__header__title">Zombicide 2nd Edition</h1>
+    <p-carousel [value]="news" class="boardgame__header__carousel"
+    [numVisible]="1" [numScroll]="1"
+    [circular]="true"
+    [responsiveOptions]="responsiveOptions"
+    [autoplayInterval]=3000>
+<ng-template let-new pTemplate="item" >
+<div class="border-1 surface-border border-round m-2 text-center py-5 px-3" >
+      <img [src]="new.bgImg" alt="pepito" class="boardgame__header__carousel__img" />
+</div>
+</ng-template>
+</p-carousel>
+  </section>
+  <body class="boardgame__body">
+    <ul class="boardgame__body__info-list">
+      <!-- Number of Players -->
+      <li class="boardgame__body__info-list__item">
+        <span class="boardgame__body__info-list__item__title">Numero de Jugadores</span>
+        <span class="boardgame__body__info-list__item__value">1-6</span>
+      </li>
+      <!-- Time -->
+      <li class="boardgame__body__info-list__item">
+        <span class="boardgame__body__info-list__item__title">Tiempo de Juego</span>
+        <span class="boardgame__body__info-list__item__value">60min</span>
+      </li>
+      <!-- difficulty -->
+      <li class="boardgame__body__info-list__item">
+        <span class="boardgame__body__info-list__item__title">Dificultad</span>
+        <span class="boardgame__body__info-list__item__value">Media</span>
+      </li>
+      <!-- replayability -->
+      <li class="boardgame__body__info-list__item">
+        <span class="boardgame__body__info-list__item__title">Re-jugabilidad</span>
+        <span class="boardgame__body__info-list__item__value">Alta</span>
+      </li>
+    </ul>
+    <section class="boardgame__body__review">
+      <h3 class="boardgame__body__review__title">Reseña Manija</h3>
+      <p class="boardgame__body__review__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eum dolor, alias autem nemo tenetur omnis praesentium laborum. Temporibus, nesciunt ex facere sint placeat adipisci architecto iusto repudiandae? Eum officiis nobis, dolore similique quis quisquam ad porro ipsam ab placeat!</p>
+      <span class="boardgame__body__review__btn">Como Jugar</span>
+    </section>
+
+  </body>
+</main>
