@@ -2,6 +2,7 @@
 
 .nav-bar{
   background-color: $background-nav-color;
+  z-index: 999;
 
   &__ul{
     display: flex;

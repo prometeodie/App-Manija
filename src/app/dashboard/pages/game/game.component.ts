@@ -8,6 +8,8 @@ import { ResponsiveCarouselOptions } from '../../interfaces';
 })
 export class GameComponent implements OnInit{
   responsiveOptions: ResponsiveCarouselOptions[] | undefined;
+  showImg: boolean = false;
+  fullImgSrc!:string;
   news: any = [
     { bgImg:'../../../../assets/boardgame carousel imgs/boargame img1.jpeg'},
     { bgImg:'../../../../assets/boardgame carousel imgs/boargame img2.jpeg'},
@@ -32,6 +34,15 @@ export class GameComponent implements OnInit{
             numScroll: 1
         }
     ];
+    }
+
+    showFullImg(src:string){
+      this.fullImgSrc = src;
+      this.showImg = !this.showImg;
+    }
+
+    closeFullImg(){
+      this.showImg = false;
     }
 }
 

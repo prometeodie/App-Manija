@@ -1,14 +1,14 @@
 <main class="boardgame">
   <section class="boardgame__header">
-    <h1 class="boardgame__header__title">Zombicide 2nd Edition</h1>
     <p-carousel [value]="news" class="boardgame__header__carousel"
     [numVisible]="1" [numScroll]="1"
     [circular]="true"
     [responsiveOptions]="responsiveOptions"
     [autoplayInterval]=3000>
-<ng-template let-new pTemplate="item" >
-<div class="border-1 surface-border border-round m-2 text-center py-5 px-3" >
-      <img [src]="new.bgImg" alt="pepito" class="boardgame__header__carousel__img" />
+    <ng-template let-new pTemplate="item" >
+      <div class="border-1 surface-border border-round m-2 text-center py-5 px-3" >
+        <h1 class="boardgame__header__carousel__title">Zombicide 2nd Edition</h1>
+        <img [src]="new.bgImg" alt="pepito" class="boardgame__header__carousel__img"  (click)="showFullImg(new.bgImg)"/>
 </div>
 </ng-template>
 </p-carousel>
@@ -38,9 +38,16 @@
     </ul>
     <section class="boardgame__body__review">
       <h3 class="boardgame__body__review__title">Reseña Manija</h3>
-      <p class="boardgame__body__review__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eum dolor, alias autem nemo tenetur omnis praesentium laborum. Temporibus, nesciunt ex facere sint placeat adipisci architecto iusto repudiandae? Eum officiis nobis, dolore similique quis quisquam ad porro ipsam ab placeat!</p>
-      <span class="boardgame__body__review__btn">Como Jugar</span>
+      <p class="boardgame__body__review__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere at quas delectus quisquam incidunt itaque impedit, ipsa quidem reiciendis nesciunt omnis accusamus soluta nostrum dicta sunt corporis expedita? Deserunt iste nemo dolore illum quidem recusandae inventore, fugiat eligendi aliquam in odit, nisi, autem alias commodi amet aliquid quasi. Ex fuga et corporis ab dolorum provident odio ratione est amet reiciendis, quis blanditiis dignissimos. Architecto sunt in reiciendis laboriosam accusamus nesciunt iure id autem labore voluptatibus. Commodi totam quisquam nostrum magni temporibus debitis voluptate placeat officia fuga, iusto reprehenderit odio repudiandae exercitationem rerum facere accusantium quod iste. Dolore quos, nesciunt labore debitis iusto tempore nisi magni a aut, vitae molestiae dolorum ex corrupti beatae quasi non mollitia quod commodi dignissimos tempora molestias est ducimus? Ratione molestiae delectus esse pariatur beatae impedit cumque, minus vitae commodi, voluptas in ex, odit dolor nam modi facilis? Nobis modi minima quibusdam beatae tenetur reprehenderit odit quasi illum vitae nostrum perspiciatis at voluptates aspernatur nesciunt ipsum fugiat perferendis incidunt explicabo culpa iure, dolores provident nisi sed eaque? Facilis dolorum officiis earum dignissimos deleniti recusandae nesciunt modi fuga tempora! Maxime rem minima est itaque quas numquam nisi. Vero minima dolores porro consequatur atque quidem alias ipsum adipisci quae neque distinctio ea reprehenderit commodi recusandae sit voluptatibus nisi perspiciatis ducimus ut, nesciunt saepe. Incidunt deleniti mollitia nostrum harum blanditiis sed possimus quisquam? Nemo, consequuntur voluptatibus repellendus error doloremque adipisci repellat aliquam dolore nostrum quia. Obcaecati, perspiciatis error. Aliquid ad exercitationem itaque aperiam voluptas in! Natus cupiditate aliquid perferendis nihil impedit veritatis recusandae ratione. Praesentium eligendi eaque ex cumque porro autem illo doloribus omnis et deserunt, quia reiciendis totam, sit enim. Aperiam optio obcaecati accusamus! Beatae eos tenetur deserunt non sit. Sed, nisi. Fuga doloribus temporibus ea eos animi modi doloremque iure voluptatum ut dolorum, totam tempora provident quas sit nihil quae incidunt? Eum voluptatem aliquam aperiam ipsa perferendis harum asperiores eveniet, animi quaerat veritatis nesciunt hic illo maxime. Eaque pariatur beatae, aliquid unde esse incidunt deserunt perspiciatis rerum deleniti a minima, voluptas eius natus quidem veritatis magnam officiis. Dolorem, consectetur enim autem illum nesciunt error. Minima eum perferendis sint omnis iure deleniti, vitae natus modi impedit qui, voluptatibus perspiciatis voluptatem nihil eligendi ullam mollitia quidem consectetur nemo totam ad nostrum laborum beatae exercitationem. Accusantium omnis quisquam saepe eius expedita, accusamus neque repellendus delectus rem sint dolorem eligendi voluptates nulla culpa architecto totam autem, consequuntur harum aut suscipit ducimus voluptatem quos eos! Dolorum veritatis odio a in voluptates quidem neque excepturi quo consequuntur alias! Eaque voluptatem sit sequi modi quis corrupti odio delectus? Saepe sequi soluta laboriosam nam alias dicta odit recusandae dignissimos! Sequi vero optio inventore maiores odit dolorem, cupiditate illo officia omnis quasi reprehenderit commodi. Sunt esse quam error doloribus maxime ipsa? Corporis dignissimos, magni voluptate quae enim animi cumque molestias! Sequi, praesentium explicabo cum voluptatibus alias ratione repellat maiores aspernatur perferendis nulla sit maxime excepturi ut expedita vero natus soluta laboriosam sint tempora dignissimos dolore. Nulla assumenda illo iusto dolore veritatis unde nobis officia, non a nihil velit. Quae labore provident inventore iure rem aut accusamus. Quod, earum pariatur! Dicta facilis inventore ullam reiciendis consequuntur mollitia temporibus nisi aspernatur illum laborum! Sint cupiditate ullam id! Corrupti dicta beatae, magni ducimus ad esse at ipsam tenetur illum officiis eveniet modi doloremque dolore magnam quod quos similique! Recusandae, voluptate? Officia possimus neque deleniti animi laborum quos enim aspernatur quasi eos voluptas, praesentium quod inventore ullam provident nulla maxime sint. Voluptas maiores earum modi inventore neque ab excepturi similique praesentium quidem eos expedita sed cum doloremque impedit magni voluptatem, sit necessitatibus veniam quaerat! Amet aliquid vel deleniti numquam laborum!</p>
+      <div class="boardgame__body__review__btn">
+        <a href="https://www.youtube.com/watch?v=BTkPDrz2k-k" class="boardgame__body__review__btn__btn" target="_blank">Como Jugar</a>
+      </div>
     </section>
-
   </body>
+  <div class="boardgame__full-img" *ngIf="showImg">
+    <div class="boardgame__full-img__img-close-mark">
+      <img [src]="fullImgSrc" alt="FullImg" class="boardgame__full-img__img-close-mark__img">
+      <i class="fa-solid fa-circle-xmark boardgame__full-img__img-close-mark__close-mark" (click)="closeFullImg()"></i>
+    </div>
+  </div>
 </main>
