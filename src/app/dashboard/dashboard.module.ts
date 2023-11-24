@@ -18,6 +18,7 @@ import { LayoutComponent } from './pages/layout/layout.component';
 // STAND ALONE COMPONENTS
 import { BoardgameCardComponent } from './components/boardgame-card/boardgame-card.component';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
+import { ManijometroComponent } from './components/manijometro/manijometro.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { BlogCardComponent } from './components/blog-card/blog-card.component';
     RouterModule,
     SharedModule,
     BoardgameCardComponent,
-    BlogCardComponent
+    BlogCardComponent,
+    ManijometroComponent
   ]
 })
 export class DashboardModule { }

@@ -1,11 +1,12 @@
 import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { ManijometroComponent } from '../manijometro/manijometro.component';
 
 @Component({
   selector: 'boardgame-card',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, ManijometroComponent],
   templateUrl: './boardgame-card.component.html',
   styleUrls: ['./boardgame-card.component.scss']
 })

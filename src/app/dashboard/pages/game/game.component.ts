@@ -10,6 +10,9 @@ export class GameComponent implements OnInit{
   responsiveOptions: ResponsiveCarouselOptions[] | undefined;
   showImg: boolean = false;
   fullImgSrc!:string;
+  manijometroScore = 90;
+  reJugabilidad = 'alta';
+  dificultad = 'media';
   news: any = [
     { bgImg:'../../../../assets/boardgame carousel imgs/boargame img1.jpeg'},
     { bgImg:'../../../../assets/boardgame carousel imgs/boargame img2.jpeg'},

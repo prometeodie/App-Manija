@@ -20,26 +20,12 @@ de juegos component poner que las cards siempre tengan el 100%del padre, entonce
       <span class="boardgame-card__body__chips__chip"> category</span>
       <span class="boardgame-card__body__chips__chip"> category123</span>
     </div>
-    <div class="boardgame-card__body__manijometro">
-      <div class="boardgame-card__body__manijometro__info">
-        <h3 class="boardgame-card__body__manijometro__info__title">
-          Manijometro
-        </h3>
-        <span class="boardgame-card__body__manijometro__info__question">
-          Que puntuación le dan los manijas a este juego?
-        </span>
-      </div>
-      <div class="boardgame-card__body__manijometro__pie-chart">
-        <div class="boardgame-card__body__manijometro__pie-chart__chart"
-        [style.background]="donnutChartColor(manijometroScore1)"
-        ></div>
-        <div class="boardgame-card__body__manijometro__pie-chart__score">{{manijometroScore1}}/100</div>
-      </div>
-    </div>
+    <manijometro [manijometroScore]= manijometroScore1/>
     <p class="boardgame-card__body__game-synopsis">Zombicide, the board game, has taken the world by storm with over two million copies sold since its release in 2012 and spawning a cult franchise of cooperative zombie slaying all over the world. In Zombicide, zombies are controlled....</p>
     <span class="boardgame-card__body__btn" routerLink="/lmdr/boardgame/lunaCapital">Leer Más...</span>
   </section>
 </main>
+
 <main class="boardgame-card boardgame-card__top-2">
   <header class="boardgame-card__header">
     <img  class="boardgame-card__header__img" src="../../../../assets/boargame-card img/luna.jpeg" alt="img title">
@@ -59,26 +45,12 @@ de juegos component poner que las cards siempre tengan el 100%del padre, entonce
       <span class="boardgame-card__body__chips__chip"> category</span>
       <span class="boardgame-card__body__chips__chip"> category123</span>
     </div>
-    <div class="boardgame-card__body__manijometro">
-      <div class="boardgame-card__body__manijometro__info">
-        <h3 class="boardgame-card__body__manijometro__info__title">
-          Manijometro
-        </h3>
-        <span class="boardgame-card__body__manijometro__info__question">
-          Que puntuación le dan los manijas a este juego?
-        </span>
-      </div>
-      <div class="boardgame-card__body__manijometro__pie-chart">
-        <div class="boardgame-card__body__manijometro__pie-chart__chart"
-        [style.background]="donnutChartColor(manijometroScore2)"
-        ></div>
-        <div class="boardgame-card__body__manijometro__pie-chart__score">{{manijometroScore2}}/100</div>
-      </div>
-    </div>
+    <manijometro [manijometroScore]= manijometroScore2/>
     <p class="boardgame-card__body__game-synopsis">Zombicide, the board game, has taken the world by storm with over two million copies sold since its release in 2012 and spawning a cult franchise of cooperative zombie slaying all over the world. In Zombicide, zombies are controlled....</p>
     <span class="boardgame-card__body__btn">Leer Más...</span>
   </section>
 </main>
+
 <main class="boardgame-card boardgame-card__top-3">
   <header class="boardgame-card__header">
     <img  class="boardgame-card__header__img" src="../../../../assets/boargame-card img/zombicide2.jpeg" alt="img title">
@@ -98,22 +70,7 @@ de juegos component poner que las cards siempre tengan el 100%del padre, entonce
       <span class="boardgame-card__body__chips__chip"> category</span>
       <span class="boardgame-card__body__chips__chip"> category123</span>
     </div>
-    <div class="boardgame-card__body__manijometro">
-      <div class="boardgame-card__body__manijometro__info">
-        <h3 class="boardgame-card__body__manijometro__info__title">
-          Manijometro
-        </h3>
-        <span class="boardgame-card__body__manijometro__info__question">
-          Que puntuación le dan los manijas a este juego?
-        </span>
-      </div>
-      <div class="boardgame-card__body__manijometro__pie-chart">
-        <div class="boardgame-card__body__manijometro__pie-chart__chart"
-        [style.background]="donnutChartColor(manijometroScore3)"
-        ></div>
-        <div class="boardgame-card__body__manijometro__pie-chart__score">{{manijometroScore3}}/100</div>
-      </div>
-    </div>
+    <manijometro [manijometroScore]= manijometroScore3/>
     <p class="boardgame-card__body__game-synopsis">Zombicide, the board game, has taken the world by storm with over two million copies sold since its release in 2012 and spawning a cult franchise of cooperative zombie slaying all over the world. In Zombicide, zombies are controlled....</p>
     <span class="boardgame-card__body__btn">Leer Más...</span>
   </section>

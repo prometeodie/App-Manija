@@ -1,0 +1,54 @@
+@import '../../scss/variables.scss';
+
+.manijometro,
+.manijometro__pie-chart,
+.manijometro__pie-chart__chart{
+  display: flex;
+}
+
+.manijometro,
+.manijometro__pie-chart,
+.manijometro__pie-chart__chart{
+  align-items: center;
+}
+
+.manijometro__pie-chart,
+.manijometro__pie-chart__chart{
+  justify-content: center;
+}
+
+.manijometro{
+  padding: 1rem;
+  border-radius: 20px;
+  margin-bottom: 0.8rem;
+  background-color: $background-board-game-card-other-info;
+  color: $font-color-card-game;
+
+  &__info{
+    width: 9rem;
+    &__question{
+      display: block;
+      font-size: xx-small;
+      margin-left: 0.5rem;
+      margin-top: 0.4rem;
+    }
+  }
+
+  &__pie-chart__chart{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+
+    &::before{
+      content: "";
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+      background-color:$background-board-game-card-other-info;
+      }
+    }
+
+    &__pie-chart__score{
+      position: absolute;
+    }
+}

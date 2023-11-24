@@ -1,0 +1,16 @@
+<div class="manijometro">
+  <div class="manijometro__info">
+    <h3 class="manijometro__info__title">
+      Manijometro
+    </h3>
+    <span class="manijometro__info__question">
+      Que puntuación le dan los manijas a este juego?
+    </span>
+  </div>
+  <div class="manijometro__pie-chart">
+    <div class="manijometro__pie-chart__chart"
+    [style.background]="donnutChartColor(manijometroScore)"
+    ></div>
+    <div class="manijometro__pie-chart__score">{{manijometroScore}}/100</div>
+  </div>
+</div>
