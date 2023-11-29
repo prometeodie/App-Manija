@@ -10,6 +10,9 @@ import { CommonModule } from '@angular/common';
 })
 export class ManijometroComponent {
   @Input() manijometroScore!: number;
+
+  isClosedMAnijometroRules:boolean = false;
+
   donnutChartColor(scoreManija:number){
     let color1!: string;
     let color2!: string;
@@ -29,5 +32,9 @@ export class ManijometroComponent {
    }
 
    return `conic-gradient(${color1} ${scoreManija * 3.6/2}deg, ${color2} ${scoreManija * 3.6}deg, rgb(0 0 0 / 65%) 0deg)`;
+ }
+
+ openCloseMAnijometroRules(){
+  this.isClosedMAnijometroRules = !this.isClosedMAnijometroRules;
  }
 }

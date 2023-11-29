@@ -33,6 +33,11 @@
   padding: 1rem;
   position: relative;
   &__header{
+
+    &__carousel{
+      max-width: 900px;
+      // TODO:acomodar el max with del carousel
+    }
     &__carousel__title{
       background: linear-gradient(180deg, rgb(4 3 3 / 78%) 62%, rgba(4, 3, 3, 0.00) 84.48%);
       color: $boardgame-title-font-color;
@@ -67,7 +72,7 @@
 
         &__title{
           text-align: center;
-          color: #A39B9B;
+          color: $font-color-card-game;
           font-weight: 700;
         }
 
@@ -134,10 +139,11 @@
 
     &__img-close-mark{
       position: relative;
+      margin-top: 2rem;
 
       &__close-mark{
         position: absolute;
-        top: -1.5rem;
+        top: -1rem;
         right: 0;
         font-size: x-large;
         cursor: pointer;
@@ -171,3 +177,26 @@
   color: #e6311d;
 }
 
+
+// MEDIA QUERIES
+
+@media (min-width:600px) {
+
+  .boardgame__header__carousel__img{
+    height: 21rem;
+  }
+  .boardgame__body__manijometro{
+    width: 60%;
+  }
+}
+
+@media (min-width:800px) {
+
+  .boardgame__header__carousel__img{
+    height: 29rem;
+    max-width: 800px;
+  }
+  .boardgame__body__manijometro{
+    width: 50%;
+  }
+}

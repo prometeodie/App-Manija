@@ -5,6 +5,7 @@
     </h3>
     <span class="manijometro__info__question">
       Que puntuación le dan los manijas a este juego?
+      <i class="fa-solid fa-circle-info manijometro__info__question__icon" (click)="openCloseMAnijometroRules()"></i>
     </span>
   </div>
   <div class="manijometro__pie-chart">
@@ -13,4 +14,18 @@
     ></div>
     <div class="manijometro__pie-chart__score">{{manijometroScore}}/100</div>
   </div>
+  <div class="manijometro__rules"  *ngIf="isClosedMAnijometroRules">
+    <h3 class="manijometro__rules__title">Como evalua el Manijometro un Juego</h3>
+    <p class="manijometro__rules__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni qui, tempora quo debitis recusandae alias enim, illo provident ut aut pariatur laboriosam sed, culpa deleniti fuga veniam beatae laudantium tempore!</p>
+    <ul class="manijometro__rules__list">
+      <li class="manijometro__rules__list__item">Lorem ipsum dolor sit amet.</li>
+      <li class="manijometro__rules__list__item">Lorem ipsum dolor sit amet.</li>
+      <li class="manijometro__rules__list__item">Lorem ipsum dolor sit amet.</li>
+      <li class="manijometro__rules__list__item">Lorem ipsum dolor sit amet.</li>
+      <li class="manijometro__rules__list__item">Lorem ipsum dolor sit amet.</li>
+      <li class="manijometro__rules__list__item">Lorem ipsum dolor sit amet.</li>
+    </ul>
+    <i class="fa-solid fa-circle-xmark manijometro__rules__close-icon" (click)="openCloseMAnijometroRules()"></i>
+  </div>
 </div>
+
