@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./blogs.component.scss']
 })
 export class BlogsComponent {
-
+  tags: string[]= ['cocina','juegos','eventos','otros','franco','gusa','tomi','tincho','franBa','Pua'];
 }

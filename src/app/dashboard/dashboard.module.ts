@@ -19,6 +19,7 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { BoardgameCardComponent } from './components/boardgame-card/boardgame-card.component';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { ManijometroComponent } from './components/manijometro/manijometro.component';
+import { TagsNavbarComponent } from './components/tags-navbar/tags-navbar.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { ManijometroComponent } from './components/manijometro/manijometro.compo
     SharedModule,
     BoardgameCardComponent,
     BlogCardComponent,
-    ManijometroComponent
+    ManijometroComponent,
+    TagsNavbarComponent
   ]
 })
 export class DashboardModule { }

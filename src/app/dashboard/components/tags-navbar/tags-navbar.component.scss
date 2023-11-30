@@ -1,0 +1,25 @@
+
+.tags,
+.tags__list{
+  width: 100%;
+}
+
+.tags{
+
+  border-bottom: 1px solid #666;
+  padding: 0.3rem;
+
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+
+    &__item{
+      cursor: pointer;
+      font-size: 13px;
+      margin: 0.3rem;
+    }
+  }
+}
+

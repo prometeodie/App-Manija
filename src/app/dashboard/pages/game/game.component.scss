@@ -1,9 +1,10 @@
 @import '../../scss/variables.scss';
 
   .boardgame,
+  .boardgame__header,
+  .boardgame__body,
   .boardgame__body__info-list,
   .boardgame__body__info-list__item,
-  .boardgame__body,
   .boardgame__full-img,
   .boardgame__full-img__img-close-mark,
   .boardgame__body__review__btn{
@@ -16,6 +17,7 @@
     flex-direction: column;
   }
 
+  .boardgame__header,
   .boardgame__body__info-list,
   .boardgame__full-img,
   .boardgame__full-img__img-close-mark,
@@ -29,28 +31,34 @@
     align-items: center;
   }
 
+  .boardgame__header__carousel__title,
+  .boardgame__header__carousel__img,
+  .boardgame__body__manijometro,
+  .boardgame__body__review__btn,
+  .boardgame__body__review__btn__btn{
+    width: 100%;
+  }
+
 .boardgame{
   padding: 1rem;
   position: relative;
   &__header{
 
     &__carousel{
+      display: block;
       max-width: 900px;
-      // TODO:acomodar el max with del carousel
     }
     &__carousel__title{
       background: linear-gradient(180deg, rgb(4 3 3 / 78%) 62%, rgba(4, 3, 3, 0.00) 84.48%);
       color: $boardgame-title-font-color;
       padding: 0.5rem 0.8rem 3rem 0.8rem;
       position: absolute;
-      width: 100%;
       z-index: 1;
     }
 
     &__carousel__img{
       height: 16rem;
       object-fit: cover;
-      width: 100%;
     }
   }
 
@@ -89,7 +97,6 @@
 
       &__manijometro{
         margin-top: 1rem;
-        width: 100%;
       }
 
       &__review{
@@ -106,14 +113,9 @@
           font-size: 14px;
         }
 
-        &__btn{
-          width: 100%;
-        }
-
         &__btn__btn{
           color: #fff;
           text-decoration: none;
-          width: 100%;
           padding: 1rem;
           margin-top: 1rem;
           display: block;
@@ -139,7 +141,7 @@
 
     &__img-close-mark{
       position: relative;
-      margin-top: 2rem;
+      margin-top: 3rem;
 
       &__close-mark{
         position: absolute;
@@ -186,17 +188,58 @@
     height: 21rem;
   }
   .boardgame__body__manijometro{
-    width: 60%;
+    width: 21.5rem;
   }
 }
 
-@media (min-width:800px) {
+@media (min-width:801px) {
 
   .boardgame__header__carousel__img{
-    height: 29rem;
-    max-width: 800px;
+    height: 27rem ;
   }
-  .boardgame__body__manijometro{
-    width: 50%;
+  .boardgame__body__review{
+      padding: 1rem 2rem;
+      &__text{
+        font-size: 16px;
+      }
+  }
+
+}
+
+@media (min-width:1025px) {
+  .boardgame{
+    padding: 1rem 4rem;
+
+    &__full-img{
+      width: calc(100% - 8rem);
+    }
+
+    &__header__carousel__img{
+      height: 32rem ;
+    }
+
+    &__body__manijometro{
+      width: 30rem;
+    }
+
+    &__body__info-list{
+      width: 26rem;
+      font-size: 22px;
+
+      &__item{
+        height: 7.5rem;
+        width: 12.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width:1289px) {
+  .boardgame{
+    padding: 1rem 10%;
+
+    &__full-img{
+      width: calc(100% - 20%);
+     }
   }
 }

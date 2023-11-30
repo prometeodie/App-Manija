@@ -1,1 +1,5 @@
-<p>tags-navbar works!</p>
+<main class="tags">
+  <ul class="tags__list">
+    <li class="tags__list__item" *ngFor="let tag of tags">{{tag | titlecase}}</li>
+  </ul>
+</main>
