@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class BlogsComponent {
   tags: string[]= ['cocina','juegos','eventos','otros','franco','gusa','tomi','tincho','franBa','Pua'];
+
+
+  filterByTag($event:string){
+    console.log($event);
+  }
 }

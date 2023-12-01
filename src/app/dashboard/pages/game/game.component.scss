@@ -138,10 +138,12 @@
     width: calc(100% - 2rem);
     height: 100%;
     background-color: rgba(163, 155, 155, 0.473);
+    overflow: scroll;
+    z-index: 999999;
 
     &__img-close-mark{
       position: relative;
-      margin-top: 3rem;
+      margin: 35% 0 2rem 0;
 
       &__close-mark{
         position: absolute;
@@ -202,6 +204,9 @@
       &__text{
         font-size: 16px;
       }
+  }
+  .boardgame__full-img__img-close-mark{
+    margin-top: 3rem;
   }
 
 }

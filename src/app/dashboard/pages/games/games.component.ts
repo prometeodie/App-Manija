@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class GamesComponent {
   tags: string[]= ['party','euro','filler','ameritrash','20min','30min','40min','60min','120min'];
+
+  filterByTag($event:any){
+    console.log($event)
+  }
 }
