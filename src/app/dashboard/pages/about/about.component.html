@@ -1,8 +1,5 @@
 <main class="about">
-  <h1 class="about__title">Nosotros</h1>
-  <h5 class="about__sub-title">
-    Un grupo de pibardos que juegan juegitos
-  </h5>
+  <title-subtitle-section [titleSubtitle] ='titleSubtitle'/>
   <section class="about__section" *ngFor="let info of aboutInfo">
     <img [src]="info.img" [alt]="info.imgText" class="about__section__img">
     <p class="about__section__paragraph">

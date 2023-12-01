@@ -20,6 +20,7 @@ import { BoardgameCardComponent } from './components/boardgame-card/boardgame-ca
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { ManijometroComponent } from './components/manijometro/manijometro.component';
 import { TagsNavbarComponent } from './components/tags-navbar/tags-navbar.component';
+import { TitleSubTitleSectionComponent } from './components/title-sub-title-section/title-sub-title-section.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { TagsNavbarComponent } from './components/tags-navbar/tags-navbar.compon
     BoardgameCardComponent,
     BlogCardComponent,
     ManijometroComponent,
-    TagsNavbarComponent
+    TagsNavbarComponent,
+    TitleSubTitleSectionComponent
   ]
 })
 export class DashboardModule { }

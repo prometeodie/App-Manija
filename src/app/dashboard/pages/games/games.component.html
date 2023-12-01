@@ -1,2 +1,8 @@
 <tags-navbar [tags]="tags" (tag)="filterByTag($event)"/>
-<boardgame-card/>
+<main class="board-games">
+  <title-subtitle-section [titleSubtitle] ='titleSubtitle'/>
+  <section class="board-games__cards-section">
+    <boardgame-card/>
+    <boardgame-card/>
+  </section>
+</main>

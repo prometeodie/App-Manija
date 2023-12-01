@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import Swal, { SweetAlertIcon } from 'sweetalert2';
-import { ErrorMessage } from '../../interfaces';
+import { ErrorMessage, Titles } from '../../interfaces';
 import { AbstractControl, FormBuilder, ValidatorFn, Validators } from '@angular/forms';
 
 @Component({
@@ -9,6 +9,11 @@ import { AbstractControl, FormBuilder, ValidatorFn, Validators } from '@angular/
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  titleSubtitle:Titles = {
+    title:'Contacto',
+    subTitle:'Envianos tu consulta.',
+  }
+
   ngAfterViewInit(): void {
     this.isImgLoaded = true;
   }

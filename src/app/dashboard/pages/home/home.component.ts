@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EventManija, New, ResponsiveCarouselOptions } from '../../interfaces';
+import { EventManija, New, ResponsiveCarouselOptions, Titles } from '../../interfaces';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +7,11 @@ import { EventManija, New, ResponsiveCarouselOptions } from '../../interfaces';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+  titleSubtitle:Titles = {
+    title:'Noticias',
+    subTitle:'',
+  }
 
   news:New[] = [
     {

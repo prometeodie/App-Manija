@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AboutInfo } from '../../interfaces';
+import { AboutInfo, Titles } from '../../interfaces';
 
 @Component({
   selector: 'app-about',
@@ -7,6 +7,11 @@ import { AboutInfo } from '../../interfaces';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
+  titleSubtitle:Titles = {
+    title:'Nosotros',
+    subTitle:'Un grupo de pibardos que juegan juegitos',
+  }
+
   aboutInfo: AboutInfo[] = [
     {
       img:'../../../../assets/about img/WhatsApp Image 2023-10-27 at 09.47.52.jpeg',

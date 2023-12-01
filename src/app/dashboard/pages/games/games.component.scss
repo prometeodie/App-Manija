@@ -1,0 +1,17 @@
+
+.board-games,
+.board-games__cards-section{
+  width: 100%;
+}
+
+.board-games{
+  padding: 1rem 0.5rem;
+
+  &__cards-section{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// TODO:revisar y acomodar padding tarjeta with

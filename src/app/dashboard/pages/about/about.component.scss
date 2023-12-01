@@ -3,15 +3,6 @@
 .about{
   padding: 1rem;
 
-  &__title,
-  &__sub-title{
-    padding-bottom: 0.5rem;
-  }
-
-  &__sub-title{
-    font-weight: 500;
-  }
-
   &__section{
     display: flex;
     flex-direction: column;
