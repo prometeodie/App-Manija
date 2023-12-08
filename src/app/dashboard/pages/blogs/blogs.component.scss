@@ -1,0 +1,41 @@
+@import '../../scss/variables.scss';
+
+.blogs{
+  padding: 1rem 0.5rem;
+  width: 100%;
+
+  &__cards-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 296px);
+    grid-gap: 10px;
+    background: $background-sections-color;
+    justify-content: center;
+    border-radius: 8px;
+    padding:1rem;
+    gap: 1rem;
+  }
+}
+
+// MEDIA QUERIES
+@media (min-width:600px) {
+  .blogs{
+    padding: 1rem;
+
+    &__cards-section{
+      grid-template-columns: repeat(1, 520px);
+    }
+  }
+}
+
+@media (min-width:1100px) {
+  .blogs__cards-section{
+    grid-template-columns: repeat(2, 520px);
+  }
+}
+
+
+@media (min-width:1289px) {
+  .blogs{
+    padding: 1rem 10%;
+  }
+}

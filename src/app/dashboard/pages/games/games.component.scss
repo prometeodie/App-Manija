@@ -1,3 +1,4 @@
+@import '../../scss/variables.scss';
 
 .board-games,
 .board-games__cards-section{
@@ -8,10 +9,28 @@
   padding: 1rem 0.5rem;
 
   &__cards-section{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 288px);
+
+    gap: 1rem;
+    background: $background-sections-color;
+    border-radius: 8px;
+    justify-content: center;
+    padding:2rem 0;
   }
 }
 
-// TODO:revisar y acomodar padding tarjeta with
+// MEDIA QUERIES
+
+@media (min-width:800px) {
+  .board-games__cards-section{
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, 304px);
+  }
+}
+
+@media (min-width:1289px) {
+  .board-games{
+    padding: 1rem 10%;
+  }
+}

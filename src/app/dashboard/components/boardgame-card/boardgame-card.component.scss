@@ -44,8 +44,6 @@
     color: $top-color;
     background-color: #131212ce;
     border-radius: 50%;
-    margin-right: 0.2rem;
-
 
       &::after{
         content: 'Top '$puesto' Manijometro';
@@ -67,8 +65,6 @@
   height: 37.5rem;
   border-radius: 25px;
   background: $background-cards;
-  margin: 2rem 0.5rem; //TODO:borrar
-
 
   // Top games Classes
   // GOLD
