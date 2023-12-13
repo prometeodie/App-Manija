@@ -1,0 +1,27 @@
+@import '../../scss/variables.scss';
+
+.search-bar{
+  display: flex;
+  border: 2px solid $search-bar-border-color;
+  border-radius: 3px;
+
+  &__search-btn{
+    padding: 0.3rem;
+    border-right: 2px solid $search-bar-border-color;
+    background-color: #3b3b3b;
+    cursor: pointer;
+
+    &:hover{
+      color: rgb(174, 9, 189);
+    }
+
+    &:active{
+     color: #fff;
+    }
+
+  }
+  &__search-bar{
+    border: 0;
+    outline: none;
+  }
+}

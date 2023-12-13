@@ -4,6 +4,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterModule } from '@angular/router';
+import { SearchBarComponent } from '../components/search-bar/search-bar.component';
+import { SearchResultComponent } from '../components/search-result/search-result.component';
 
 
 
@@ -15,7 +17,9 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    SearchBarComponent,
+    SearchResultComponent
   ],
   exports:[
     HeaderComponent,

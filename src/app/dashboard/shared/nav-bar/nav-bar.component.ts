@@ -8,6 +8,7 @@ import { NavBar } from '../interfaces/navBar.interface';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
+  isSearchBarClose: boolean = true;
   navBar :NavBar[] = [
     {name:'Home', route:'home'},
     {name:'Blogs', route:'blogs-list'},
@@ -15,4 +16,8 @@ export class NavBarComponent {
     {name:'Nosotros', route:'about'},
     {name:'Contacto', route:'contact'}
   ]
+
+  openCloseSearchBar(){
+    this.isSearchBarClose = !this.isSearchBarClose;
+  }
 }

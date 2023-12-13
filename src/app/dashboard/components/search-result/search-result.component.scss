@@ -1,0 +1,78 @@
+
+.search-result__loading,
+.search-result__boardgames__boardgame{
+  display: flex;
+  align-items: center;
+}
+
+.search-result{
+  background-color: #000000eb;
+  padding: 0.8rem;
+  max-height: 22rem;
+  overflow: auto;
+
+  &__loading{
+    flex-direction: column;
+    &__img{
+      animation: loading-grey-efect 1.5s alternate infinite;
+    }
+  }
+
+  &__boardgames{
+    list-style: none;
+    margin-top: 0.5rem;
+    padding: 0;
+
+    &__boardgame{
+      border: 1px solid rgba(255, 140, 0, 0.589);
+      margin-bottom:0.3rem;
+      padding: 0.5rem;
+      cursor: pointer;
+      transition: all 0.5s;
+
+      &__img{
+        width: 3rem;
+      }
+
+      &__title{
+        margin-left: 1.5rem;
+      }
+
+      &:hover{
+        background-color: rgba(128, 128, 128, 0.2);
+      }
+    }
+  }
+}
+
+@keyframes loading-grey-efect {
+  from {filter: grayscale(0);}
+  to {filter: grayscale(90%);}
+}
+
+// Overflow Scroll Style
+
+.search-result::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.search-result::-webkit-scrollbar:vertical {
+  width:2px;
+}
+
+.search-result::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+}
+
+.search-result::-webkit-scrollbar:horizontal {
+  height: 5px;
+}
+
+.search-result::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+}
+
+.search-result::-webkit-scrollbar-track {
+  border-radius: 10px;
+}

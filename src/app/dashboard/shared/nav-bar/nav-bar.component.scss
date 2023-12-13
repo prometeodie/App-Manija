@@ -12,8 +12,15 @@
     padding: 0;
     &__item{
         padding: 0.7rem 0.3rem;
+        position: relative;
         cursor: pointer;
         font-size: small;
+
+      &__search-bar{
+        position: absolute;
+        right: 1.7rem;
+        top: 0.3rem;
+      }
       }
 
     &__item--search:active{
@@ -27,11 +34,26 @@
   background-color: rgba(240, 248, 255, 0.233);
 }
 
+.open-close-bar{
+  display: none;
+}
+
 // MEDIA QUERIES
 
 @media (min-width:600px) {
   .nav-bar__ul{
     max-width: 26rem;
+  }
+}
+
+@media (min-width:600px) {
+  .nav-bar__ul__item--search{
+    display: none;
+  }
+
+  .nav-bar__ul__item__search-bar{
+    right: auto;
+    display: block;
   }
 }
 

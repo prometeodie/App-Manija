@@ -1,6 +1,12 @@
 <nav class="nav-bar">
   <ul class="nav-bar__ul">
     <li class="nav-bar__ul__item " *ngFor="let item of navBar" [routerLink]="item.route" routerLinkActive="active-route" >{{item.name}}</li>
-    <li class=" nav-bar__ul__item nav-bar__ul__item--search"><i class="pi pi-search"></i></li>
+    <li class=" nav-bar__ul__item">
+      <div class="nav-bar__ul__item__search-bar" [ngClass]="{'open-close-bar':isSearchBarClose}">
+        <search-bar/>
+        <search-result/>
+      </div>
+      <i class="fa-solid fa-magnifying-glass nav-bar__ul__item--search" (click)="openCloseSearchBar()"></i>
+    </li>
   </ul>
 </nav>
