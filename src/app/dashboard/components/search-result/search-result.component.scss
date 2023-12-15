@@ -7,8 +7,10 @@
 
 .search-result{
   background-color: #000000eb;
-  padding: 0.8rem;
-  max-height: 22rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0.4rem;
+  max-height: 18.6rem;
   overflow: auto;
 
   &__loading{
@@ -25,6 +27,7 @@
 
     &__boardgame{
       border: 1px solid rgba(255, 140, 0, 0.589);
+      border-radius: 3px;
       margin-bottom:0.3rem;
       padding: 0.5rem;
       cursor: pointer;
@@ -42,6 +45,11 @@
         background-color: rgba(128, 128, 128, 0.2);
       }
     }
+  }
+
+  .search-result__boardgame-not-found{
+    text-align: center;
+    font-weight: 900;
   }
 }
 

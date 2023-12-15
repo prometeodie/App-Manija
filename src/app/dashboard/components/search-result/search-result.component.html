@@ -1,24 +1,18 @@
-<section class="search-result">
-  <div class="search-result__loading">
+<section class="search-result" *ngIf="isloadingBoardgames || boargamesResult.length > 0">
+  <div class="search-result__loading" *ngIf="isloadingBoardgames">
     <img src="../../../../assets/LMDR brand/logo-manija-green.png" alt="logo-manija" class="search-result__loading__img">
     <h4>Loading Boardgames....</h4>
   </div>
-  <ul class="search-result__boardgames">
-    <li class="search-result__boardgames__boardgame">
-      <img src="../../../../assets/boargame-card img/luna.jpeg" alt="pepito" class="search-result__boardgames__boardgame__img">
-      <h4 class="search-result__boardgames__boardgame__title">Luna Capital</h4>
-    </li>
-    <li class="search-result__boardgames__boardgame">
-      <img src="../../../../assets/boargame-card img/luna.jpeg" alt="pepito" class="search-result__boardgames__boardgame__img">
-      <h4 class="search-result__boardgames__boardgame__title">Luna Capital</h4>
-    </li>
-    <li class="search-result__boardgames__boardgame">
-      <img src="../../../../assets/boargame-card img/luna.jpeg" alt="pepito" class="search-result__boardgames__boardgame__img">
-      <h4 class="search-result__boardgames__boardgame__title">Luna Capital</h4>
-    </li>
-    <li class="search-result__boardgames__boardgame">
-      <img src="../../../../assets/boargame-card img/luna.jpeg" alt="pepito" class="search-result__boardgames__boardgame__img">
-      <h4 class="search-result__boardgames__boardgame__title">Luna Capital</h4>
-    </li>
-  </ul>
+    <ul class="search-result__boardgames" *ngIf="boargamesResult.length > 0;">
+      <li class="search-result__boardgames__boardgame" *ngFor="let boardgame of boargamesResult" routerLink="/lmdr/boardgame/lunaCapital" (click)="closeSearchBar()">
+        <img [src]="boardgame.image" alt="pepito" class="search-result__boardgames__boardgame__img">
+        <h4 class="search-result__boardgames__boardgame__title">{{boardgame.name}}</h4>
+      </li>
+    </ul>
+    <!-- <ng-template #gameNotFound>
+      <div class="search-result__boardgame-not-found">
+        Boardgame not found... :C
+      </div>
+    </ng-template> -->
+
 </section>

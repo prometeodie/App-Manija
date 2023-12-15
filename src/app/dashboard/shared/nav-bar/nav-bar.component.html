@@ -2,7 +2,7 @@
   <ul class="nav-bar__ul">
     <li class="nav-bar__ul__item " *ngFor="let item of navBar" [routerLink]="item.route" routerLinkActive="active-route" >{{item.name}}</li>
     <li class=" nav-bar__ul__item">
-      <div class="nav-bar__ul__item__search-bar" [ngClass]="{'open-close-bar':isSearchBarClose}">
+      <div class="nav-bar__ul__item__search-bar" [ngClass]="{'open-close-bar':!isSearchBarClose}">
         <search-bar/>
         <search-result/>
       </div>
