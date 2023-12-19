@@ -6,7 +6,7 @@
         <search-bar/>
         <search-result/>
       </div>
-      <i class="fa-solid fa-magnifying-glass nav-bar__ul__item--search" (click)="openCloseSearchBar()"></i>
+      <i class="fa-solid fa-magnifying-glass nav-bar__ul__item--search" [ngClass]="{'nav-bar__ul__item__active-m-glass':isSearchBarClose}"  (click)="openCloseSearchBar()"></i>
     </li>
   </ul>
 </nav>

@@ -8,7 +8,7 @@ import { ManijometroComponent } from '../manijometro/manijometro.component';
   standalone: true,
   imports: [CommonModule, RouterLink, ManijometroComponent],
   templateUrl: './boardgame-card.component.html',
-  styleUrls: ['./boardgame-card.component.scss']
+  styleUrls: ['./boardgame-card.component.scss'],
 })
 export class BoardgameCardComponent {
 

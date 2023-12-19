@@ -1,5 +1,6 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { catchError, of } from 'rxjs';
 
 
 @Injectable({
@@ -15,25 +16,33 @@ export class BoardgamesService {
   private http = inject(HttpClient);
   private _isSearchBarOpen = signal<boolean>(false)
   public isSearchBarOpen = computed(()=>this._isSearchBarOpen())
+  private _boargameNotFound = signal<boolean>(false);
+  public boargameNotFound = computed(()=>this._boargameNotFound());
   readonly debounceTimeMs = 350;
 
   constructor() {
   }
 
   getBoardgamesByQuery(query:string){
+    this.cleanSearchResult();
     this._isLoadingBoardgames.set(true);
     if(query.length === 0 ){
       this._boardgamesByQuery.set([]);
       this._isLoadingBoardgames.set(false);
       return;
     }
-    this.http.get<any>(`https://rickandmortyapi.com/api/character/?name=${query}`)
-    .subscribe(boardgames =>{
-      this._isLoadingBoardgames.set(false);
-      this._boardgamesByQuery.set(boardgames.results);
-    })
-    // TODO:agarrar el error para mostrar el boargame no encontrado usando un pipe
-
+      this.http.get<any | undefined>(`https://rickandmortyapi.com/api/character/?name=${query}`)
+      .pipe(
+        catchError((err)=>{return of(undefined)})
+      )
+      .subscribe(boardgames =>{
+        this._isLoadingBoardgames.set(false);
+        if(!boardgames){
+          this._boargameNotFound.set(true)
+          return undefined;
+        }
+        this._boardgamesByQuery.set(boardgames.results);
+      })
   }
 
   closeSearchBar(){
@@ -48,5 +57,9 @@ export class BoardgamesService {
 
   cleanSearchResult(){
     this._boardgamesByQuery.set([])
+  }
+
+  boardgameNotFound(){
+    this._boargameNotFound.set(false);
   }
 }

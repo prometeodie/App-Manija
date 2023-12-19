@@ -19,7 +19,7 @@
       &__search-bar{
         position: absolute;
         right: 1.7rem;
-        top: 0.3rem;
+        top: 0;
       }
       }
 
@@ -32,6 +32,10 @@
 
 .active-route{
   background-color: rgba(240, 248, 255, 0.233);
+}
+
+.nav-bar__ul__item__active-m-glass{
+  color: #ff4500;
 }
 
 .open-close-bar{

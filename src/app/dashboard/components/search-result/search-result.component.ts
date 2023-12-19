@@ -21,6 +21,10 @@ export class SearchResultComponent   {
     return this.boargamesService.boardgamesByQuery();
   }
 
+  get bordgameNotFound(){
+    return this.boargamesService.boargameNotFound();
+  }
+
   closeSearchBar(){
     this.boargamesService.closeSearchBar();
     this.boargamesService.cleanSearchResult();

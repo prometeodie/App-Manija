@@ -16,14 +16,29 @@ export class SearchBarComponent {
   private debounceTimer?: NodeJS.Timeout
 
   searchBoardGame(query:string){
-    if(this.debounceTimer) clearTimeout(this.debounceTimer);
-    this.debounceTimer = setTimeout(()=>{
-      this.boargameService.getBoardgamesByQuery(query);
-    },350)
+    if(query.length === 0 ){
+      this.cleanOldSearches();
+      this.boargameService.boardgameNotFound();
+    }
+    if(query){
+      if(this.debounceTimer) clearTimeout(this.debounceTimer);
+      this.debounceTimer = setTimeout(()=>{
+        this.boargameService.getBoardgamesByQuery(query);
+      },375)
+    }
+    return;
   }
 
   closeSearchBar(){
-    this.boargameService.closeSearchBar()
-    this.txtQuery.nativeElement.value = "";
+    setTimeout(()=>{
+      this.boargameService.closeSearchBar();
+      this.cleanOldSearches();
+      this.txtQuery.nativeElement.value = "";
+    },350)
+  }
+
+  //this function is to clean search result when the input is empty
+  cleanOldSearches(){
+    this.boargameService.cleanSearchResult();
   }
 }
