@@ -33,7 +33,7 @@ export class SearchBarComponent {
     setTimeout(()=>{
       this.boargameService.closeSearchBar();
       this.cleanOldSearches();
-      this.boargameService.boargameNotFound();
+      this.boargameService.boardgameNotFound();
       this.txtQuery.nativeElement.value = "";
     },350)
   }
