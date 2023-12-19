@@ -1,5 +1,5 @@
-<tags-navbar [tags]="tags" (tag)="filterByTag($event)"/>
-<main class="board-games">
+<tags-navbar [tags]="tags" (tag)="filterByTag($event)" @enterState/>
+<main class="board-games" @enterState>
   <title-subtitle-section [titleSubtitle] ='titleSubtitle'/>
   <section class="board-games__cards-section">
       <boardgame-card class="board-games__cards-section__card" />

@@ -1,4 +1,4 @@
-<main class="about">
+<main class="about" @enterState>
   <title-subtitle-section [titleSubtitle] ='titleSubtitle'/>
   <section class="about__section" *ngFor="let info of aboutInfo">
     <img [src]="info.img" [alt]="info.imgText" class="about__section__img">

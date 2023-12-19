@@ -24,7 +24,7 @@ export class SearchBarComponent {
       if(this.debounceTimer) clearTimeout(this.debounceTimer);
       this.debounceTimer = setTimeout(()=>{
         this.boargameService.getBoardgamesByQuery(query);
-      },375)
+      },600)
     }
     return;
   }

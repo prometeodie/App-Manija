@@ -1,7 +1,7 @@
 
-<tags-navbar [tags]="tags" (tag)="filterByTag($event)"/>
-<main class="blogs">
-  <title-subtitle-section [titleSubtitle] ='titleSubtitle'/>
+<tags-navbar [tags]="tags" (tag)="filterByTag($event)" @enterState/>
+<main class="blogs" @enterState>
+  <title-subtitle-section [titleSubtitle] ='titleSubtitle' />
   <section class="blogs__cards-section">
     <blog-card/>
     <blog-card/>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ManijometroComponent } from '../manijometro/manijometro.component';
 
+
 @Component({
   selector: 'boardgame-card',
   standalone: true,

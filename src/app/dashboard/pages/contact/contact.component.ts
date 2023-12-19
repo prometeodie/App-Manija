@@ -2,11 +2,26 @@ import { Component, inject } from '@angular/core';
 import Swal, { SweetAlertIcon } from 'sweetalert2';
 import { ErrorMessage, Titles } from '../../interfaces';
 import { AbstractControl, FormBuilder, ValidatorFn, Validators } from '@angular/forms';
+import { trigger, style, animate, transition, state } from '@angular/animations';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  animations: [
+    trigger('enterState',[
+      state('void',style({
+        transform: 'scale(0.98',
+        opacity:0
+      })),
+      transition(':enter',[
+        animate('300ms ease-in',style({
+          transform: 'scale(1)',
+          opacity:1
+        }))
+      ])
+    ])
+  ]
 })
 export class ContactComponent {
   titleSubtitle:Titles = {

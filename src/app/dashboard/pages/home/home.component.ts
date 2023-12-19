@@ -8,14 +8,14 @@ import { trigger, style, animate, transition, state } from '@angular/animations'
   styleUrls: ['./home.component.scss'],
   animations: [
     trigger('enterState',[
-      state('*',style({
-        transform: 'translateX(-100%)',
+      state('void',style({
+        transform: 'scale(0.98',
         opacity:0
       })),
       transition(':enter',[
-        animate(300,style({
-          transform:'translateX(0)',
-          opacity:'1'
+        animate('300ms ease-in',style({
+          transform: 'scale(1)',
+          opacity:1
         }))
       ])
     ])
